@@ -1,0 +1,266 @@
+ysun@c55:~/codings$ nohup srun --partition GPUampere --gpus 1 --time=2-1 apptainer exec --nv docker://kizunaiix/p2s:v1 bash -c "cd /homes/ysun/codings/udemt_p2s;/root/miniconda3/envs/p2s/bin/python auto_training.py" &
+[1] 2283873
+ysun@c55:~/codings$ nohup: ignoring input and appending output to 'nohup.out'
+
+ysun@c55:~/codings$
+ysun@c55:~/codings$ cat nohup.out
+INFO:    Using cached SIF image
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-debugdump required more than 50 (201) bind mounts
+mkdir: cannot create directory ‘./Point2Skeleton/results/’: File exists
+mkdir: cannot create directory ‘./Point2Skeleton/weights/’: File exists
+ysun@c55:~/codings$ cat nohup.out
+INFO:    Using cached SIF image
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-debugdump required more than 50 (201) bind mounts
+mkdir: cannot create directory ‘./Point2Skeleton/results/’: File exists
+mkdir: cannot create directory ‘./Point2Skeleton/weights/’: File exists
+ysun@c55:~/codings$ cat nohup.out
+INFO:    Using cached SIF image
+INFO:    underlay of /etc/localtime required more than 50 (88) bind mounts
+INFO:    underlay of /usr/bin/nvidia-debugdump required more than 50 (201) bind mounts
+mkdir: cannot create directory ‘./Point2Skeleton/results/’: File exists
+mkdir: cannot create directory ‘./Point2Skeleton/weights/’: File exists
+Traceback (most recent call last):
+  File "train.py", line 186, in <module>
+    A_pred = model_gae(skel_node_features, A_init)
+  File "/root/miniconda3/envs/p2s/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/homes/ysun/codings/udemt_p2s/Point2Skeleton/src/GraphAE.py", line 112, in forward
+    feat = self.encode(x, A)
+  File "/homes/ysun/codings/udemt_p2s/Point2Skeleton/src/GraphAE.py", line 73, in encode
+    x1 = self.bn1(self.conv1(x, A))
+  File "/root/miniconda3/envs/p2s/lib/python3.7/site-packages/torch/nn/modules/module.py", line 493, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/homes/ysun/codings/udemt_p2s/Point2Skeleton/src/GraphConv.py", line 75, in forward
+    x_hat.append(self.chebyshev_basis(L, x, self.K))
+  File "/homes/ysun/codings/udemt_p2s/Point2Skeleton/src/GraphConv.py", line 49, in chebyshev_basis
+    return torch.bmm(L, X)
+RuntimeError: cublas runtime error : the GPU program failed to execute at /tmp/pip-req-build-pb3z3zl3/aten/src/THC/THCBlas.cu:450
+Traceback (most recent call last):
+  File "test.py", line 96, in <module>
+    model_skel.load_state_dict(torch.load(load_skelnet_path))
+  File "/root/miniconda3/envs/p2s/lib/python3.7/site-packages/torch/serialization.py", line 382, in load
+    f = open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: '../weights/weights-skelpoint.pth'
+
+dict getted!
+ len(dict):465
+
+results/,weights/ and training-weights/ : CLEARED.
+
+[Wed May 24 16:20:20 2023]  now training s0004_pulmonary_artery.nii.g_1.ply .........
+GPU Number: 1 GPUs!
+epoch, iter: 0 0
+######### pre-training #########
+epoch, iter: 0 1
+######### pre-training #########
+epoch, iter: 1 2
+######### pre-training #########
+epoch, iter: 1 3
+######### pre-training #########
+epoch, iter: 2 4
+######### pre-training #########
+epoch, iter: 2 5
+######### pre-training #########
+epoch, iter: 3 6
+######### pre-training #########
+epoch, iter: 3 7
+######### pre-training #########
+epoch, iter: 4 8
+######### pre-training #########
+epoch, iter: 4 9
+######### pre-training #########
+epoch, iter: 5 10
+######### pre-training #########
+epoch, iter: 5 11
+######### pre-training #########
+epoch, iter: 6 12
+######### pre-training #########
+epoch, iter: 6 13
+######### pre-training #########
+epoch, iter: 7 14
+######### pre-training #########
+epoch, iter: 7 15
+######### pre-training #########
+epoch, iter: 8 16
+######### pre-training #########
+epoch, iter: 8 17
+######### pre-training #########
+epoch, iter: 9 18
+######### pre-training #########
+epoch, iter: 9 19
+######### pre-training #########
+epoch, iter: 10 20
+######### pre-training #########
+epoch, iter: 10 21
+######### pre-training #########
+epoch, iter: 11 22
+######### pre-training #########
+epoch, iter: 11 23
+######### pre-training #########
+epoch, iter: 12 24
+######### pre-training #########
+epoch, iter: 12 25
+######### pre-training #########
+epoch, iter: 13 26
+######### pre-training #########
+epoch, iter: 13 27
+######### pre-training #########
+epoch, iter: 14 28
+######### pre-training #########
+epoch, iter: 14 29
+######### pre-training #########
+epoch, iter: 15 30
+######### pre-training #########
+epoch, iter: 15 31
+######### pre-training #########
+epoch, iter: 16 32
+######### pre-training #########
+epoch, iter: 16 33
+######### pre-training #########
+epoch, iter: 17 34
+######### pre-training #########
+epoch, iter: 17 35
+######### pre-training #########
+epoch, iter: 18 36
+######### pre-training #########
+epoch, iter: 18 37
+######### pre-training #########
+epoch, iter: 19 38
+######### pre-training #########
+epoch, iter: 19 39
+######### pre-training #########
+epoch, iter: 20 40
+######### skeletal point training #########
+epoch, iter: 20 41
+######### skeletal point training #########
+epoch, iter: 21 42
+######### skeletal point training #########
+epoch, iter: 21 43
+######### skeletal point training #########
+epoch, iter: 22 44
+######### skeletal point training #########
+epoch, iter: 22 45
+######### skeletal point training #########
+epoch, iter: 23 46
+######### skeletal point training #########
+epoch, iter: 23 47
+######### skeletal point training #########
+epoch, iter: 24 48
+######### skeletal point training #########
+epoch, iter: 24 49
+######### skeletal point training #########
+epoch, iter: 25 50
+######### skeletal point training #########
+epoch, iter: 25 51
+######### skeletal point training #########
+epoch, iter: 26 52
+######### skeletal point training #########
+epoch, iter: 26 53
+######### skeletal point training #########
+epoch, iter: 27 54
+######### skeletal point training #########
+epoch, iter: 27 55
+######### skeletal point training #########
+epoch, iter: 28 56
+######### skeletal point training #########
+epoch, iter: 28 57
+######### skeletal point training #########
+epoch, iter: 29 58
+######### skeletal point training #########
+epoch, iter: 29 59
+######### skeletal point training #########
+epoch, iter: 30 60
+######### skeletal point training #########
+epoch, iter: 30 61
+######### skeletal point training #########
+epoch, iter: 31 62
+######### skeletal point training #########
+epoch, iter: 31 63
+######### skeletal point training #########
+epoch, iter: 32 64
+######### skeletal point training #########
+epoch, iter: 32 65
+######### skeletal point training #########
+epoch, iter: 33 66
+######### skeletal point training #########
+epoch, iter: 33 67
+######### skeletal point training #########
+epoch, iter: 34 68
+######### skeletal point training #########
+epoch, iter: 34 69
+######### skeletal point training #########
+epoch, iter: 35 70
+######### skeletal point training #########
+epoch, iter: 35 71
+######### skeletal point training #########
+epoch, iter: 36 72
+######### skeletal point training #########
+epoch, iter: 36 73
+######### skeletal point training #########
+epoch, iter: 37 74
+######### skeletal point training #########
+epoch, iter: 37 75
+######### skeletal point training #########
+epoch, iter: 38 76
+######### skeletal point training #########
+epoch, iter: 38 77
+######### skeletal point training #########
+epoch, iter: 39 78
+######### skeletal point training #########
+epoch, iter: 39 79
+######### skeletal point training #########
+epoch, iter: 40 80
+######### skeletal point training #########
+epoch, iter: 40 81
+######### skeletal point training #########
+epoch, iter: 41 82
+######### skeletal point training #########
+epoch, iter: 41 83
+######### skeletal point training #########
+epoch, iter: 42 84
+######### skeletal point training #########
+epoch, iter: 42 85
+######### skeletal point training #########
+epoch, iter: 43 86
+######### skeletal point training #########
+epoch, iter: 43 87
+######### skeletal point training #########
+epoch, iter: 44 88
+######### skeletal point training #########
+epoch, iter: 44 89
+######### skeletal point training #########
+epoch, iter: 45 90
+######### skeletal point training #########
+epoch, iter: 45 91
+######### skeletal point training #########
+epoch, iter: 46 92
+######### skeletal point training #########
+epoch, iter: 46 93
+######### skeletal point training #########
+epoch, iter: 47 94
+######### skeletal point training #########
+epoch, iter: 47 95
+######### skeletal point training #########
+epoch, iter: 48 96
+######### skeletal point training #########
+epoch, iter: 48 97
+######### skeletal point training #########
+epoch, iter: 49 98
+######### skeletal point training #########
+epoch, iter: 49 99
+######### skeletal point training #########
+epoch, iter: 50 100
+######### GAE training #########
+
+
+GPU Number: 1 GPUs!
+
+
+
+
+[Wed May 24 16:55:07 2023]    CONGRATULATIONS!!!
+ALL PLY FILES WORKS ARE FINISHED.
+[1]+  Done                    nohup srun --partition GPUampere --gpus 1 --time=2-1 apptainer exec --nv docker://kizunaiix/p2s:v1 bash -c "cd /homes/ysun/codings/udemt_p2s;/root/miniconda3/envs/p2s/bin/python auto_training.py"
+ysun@c55:~/codings$

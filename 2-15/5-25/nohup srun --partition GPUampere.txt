@@ -1,0 +1,8 @@
+nohup srun --partition GPUampere --gpus 1 --time=2-1 apptainer exec --nv docker://kizunaiix/p2s:v1 bash -c "cd /homes/ysun/codings/udemt_p2s;/root/miniconda3/envs/p2s/bin/python auto_training.py" &
+
+#安装
+nohup srun --partition GPUampere --gpus 1 --time=0-1 apptainer exec --nv docker://kizunaiix/p2s:v1 bash -c "cd /homes/ysun/codings/udemt_p2s/Point2Skeleton/src/pointnet2;/root/miniconda3/envs/p2s/bin/python setup.py build_ext --inplace" &
+
+#cuda_test
+nohup srun --partition GPUampere --gpus 1 --time=0-1 apptainer exec --nv docker://kizunaiix/p2s:v1 bash -c "/root/miniconda3/envs/p2s/bin/python /app/cudatest.py" &
+

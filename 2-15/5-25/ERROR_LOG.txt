@@ -1,0 +1,37 @@
+Enter passphrase for key 'C:\Users\yaodo/.ssh/id_ikim':
+Enter passphrase for key 'C:\Users\yaodo/.ssh/id_ikim': 
+dd5ab072c13b: running
+Acquiring lock on /homes/ysun/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/vscode-remote-lock.ysun.b3e4e68a0bc097f0ae7907b217c1119af9e03435
+Installing to /homes/ysun/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435...
+dd5ab072c13b%%1%%
+Downloading with wget
+wget download failed
+failed: Network is unreachable.
+printenv:
+    SHELL=/bin/bash
+    PWD=/homes/ysun/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435
+    LOGNAME=ysun
+    XDG_SESSION_TYPE=tty
+    MOTD_SHOWN=pam
+    HOME=/homes/ysun
+    LANG=C.UTF-8
+    VSCODE_AGENT_FOLDER=/homes/ysun/.vscode-server
+    SSH_CONNECTION=10.240.136.1 60588 10.240.136.176 22
+    XDG_SESSION_CLASS=user
+    USER=ysun
+    SHLVL=0
+    XDG_SESSION_ID=13038
+    XDG_RUNTIME_DIR=/run/user/477800305
+    SSH_CLIENT=10.240.136.1 60588 22
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin    
+    OLDPWD=/homes/ysun
+    _=/usr/bin/printenv
+Trigger local server download
+dd5ab072c13b:trigger_server_download
+platform==linux==
+vscodeArch==x64==
+destFolder==/homes/ysun/.vscode-server/bin/==
+destFolder2==b3e4e68a0bc097f0ae7907b217c1119af9e03435==
+dd5ab072c13b:trigger_server_download_end
+Waiting for client to transfer server archive...
+Waiting for /homes/ysun/.vscode-server/bin/b3e4e68a0bc097f0ae7907b217c1119af9e03435/vscode-scp-done.flag and vscode-server.tar.gz to exist
