@@ -1,8 +1,8 @@
 # 忽略数据集
-*.ply
+s*.g_1.ply
 *.stl
 *.obj
-*.off
+0_*.off
 
 # 忽略p2s训练出的权重
 weights-*.pth
