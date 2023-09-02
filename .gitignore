@@ -2,3 +2,7 @@
 *.ply
 *.stl
 *.obj
+*.off
+
+# 忽略p2s训练出的权重
+weights-*.pth
